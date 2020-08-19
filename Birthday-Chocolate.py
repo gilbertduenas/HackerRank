@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/the-birthday-bar/problem
+
 def birthday(s, d, m, n):
     i = j = 0
     total = 0
