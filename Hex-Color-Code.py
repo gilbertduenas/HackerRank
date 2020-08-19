@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/hex-color-code/problem
+
 import re
 
 n = int(input())

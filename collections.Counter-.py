@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/collections-counter/problem
 # brute force code, no from collections import Counter
 
 num_shoes = int(input())

@@ -1,4 +1,6 @@
+# https://www.hackerrank.com/challenges/reduce-function/problem
 # Just added line 6. Everything else was provided.
+
 from fractions import Fraction
 from functools import reduce
 

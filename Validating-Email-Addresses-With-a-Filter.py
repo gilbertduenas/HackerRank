@@ -1,4 +1,6 @@
+# https://www.hackerrank.com/challenges/validate-list-of-email-address-with-filter/problem
 # All I did for this was add lines 2 and 6-9. Done!
+
 import re
 
 def fun(s):

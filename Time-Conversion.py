@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/time-conversion/problem
+
 from datetime import datetime
 
 def timeConversion(s):

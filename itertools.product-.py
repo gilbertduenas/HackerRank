@@ -1,4 +1,6 @@
+# https://www.hackerrank.com/challenges/itertools-product/problem
 # learn to splat
+
 from itertools import product
 
 x = list(map(int, input().split()))

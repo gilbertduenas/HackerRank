@@ -1,4 +1,6 @@
+# https://www.hackerrank.com/challenges/string-validators/problem
 # must python harder!
+
 if __name__ == '__main__':
     s = input()
 

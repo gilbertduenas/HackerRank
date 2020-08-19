@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/symmetric-difference/problem
 # Working with sets
 
 index1 = input()

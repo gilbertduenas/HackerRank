@@ -1,5 +1,7 @@
+# https://www.hackerrank.com/challenges/nested-list/problem
 # frankencode....
 # v2 cleaner with a set
+
 if __name__ == '__main__':
     roster = {}
     for _ in range(int(input())):

@@ -1,4 +1,6 @@
+# https://www.hackerrank.com/challenges/python-string-formatting/problem
 # Got stumped, had to google it.
+
 def print_formatted(n):
     w = n.bit_length()
 

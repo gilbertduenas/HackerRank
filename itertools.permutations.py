@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/itertools-permutations/problem
+
 from itertools import permutations
 
 input_list = list(map(str, input().split()))
