@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/apple-and-orange/problem
+
 # s: integer, starting point of Sam's house location.
 # t: integer, ending location of Sam's house location.
 # a: integer, location of the Apple tree.
