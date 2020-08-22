@@ -1,4 +1,5 @@
 # https://www.hackerrank.com/challenges/py-set-discard-remove-pop/problem
+
 n = int(input())
 s = set(map(int, input().split()))
 t = int(input())
@@ -14,3 +15,10 @@ for i in range(t):
         s.pop()
 
 print(sum(s))
+
+# learn to eval....
+
+# for i in range(t):
+#     eval('s.{0}({1})'.format(*input().split()+['']))
+
+# print(sum(s))
