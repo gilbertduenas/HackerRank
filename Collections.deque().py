@@ -19,3 +19,11 @@ for i in range(n):
         d.appendleft(command[1])
 
 print(' '.join(d))
+
+
+# learn to getattr() haha
+
+# for _ in range(int(input())):
+#     inp = input().split()
+#     getattr(d, inp[0])(*[inp[1]] if len(inp) > 1 else [])
+# print(*[item for item in d])
