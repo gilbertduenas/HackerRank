@@ -1,4 +1,21 @@
 /* https://www.hackerrank.com/challenges/binary-search-tree-1/problem */
+SELECT CASE
+           WHEN p IS NULL THEN CONCAT(n, ' Root')
+           WHEN n IN
+                  (SELECT DISTINCT p
+                   FROM bst) THEN CONCAT(n, ' Inner')
+           ELSE CONCAT(n, ' Leaf')
+       END
+FROM bst
+ORDER BY n ASC;
+
+SELECT n,
+       IF(p IS NULL, 'Root', IF(
+                                  (SELECT COUNT(*)
+                                   FROM bst
+                                   WHERE p=b.n)>0, 'Inner', 'Leaf'))
+FROM bst AS b
+ORDER BY n;
 
 /* https://www.hackerrank.com/challenges/occupations */
 SELECT MAX(CASE
