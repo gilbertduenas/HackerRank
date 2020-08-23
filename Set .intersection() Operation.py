@@ -1,4 +1,4 @@
-/* https://www.hackerrank.com/challenges/py-set-intersection-operation/problem */
+# https://www.hackerrank.com/challenges/py-set-intersection-operation/problem
 
 i1 = input()
 set1 = set(map(int, input().split()))
