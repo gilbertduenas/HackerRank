@@ -17,6 +17,7 @@ SELECT n,
 FROM bst AS b
 ORDER BY n;
 
+
 /* https://www.hackerrank.com/challenges/occupations */
 SELECT MAX(CASE
                WHEN occupation = 'Doctor' THEN name
@@ -41,7 +42,27 @@ FROM
    FROM occupations) temp
 GROUP BY ranked;
 
+
 /* https://www.hackerrank.com/challenges/the-company/problem */
+SELECT C.company_code,
+       C.founder,
+       COUNT(DISTINCT LM.lead_manager_code),
+       COUNT(DISTINCT SM.senior_manager_code),
+       COUNT(DISTINCT M.manager_code),
+       COUNT(DISTINCT E.employee_code)
+FROM company C,
+     lead_manager LM,
+     senior_manager SM,
+     manager M,
+     employee E
+WHERE C.company_code = LM.company_code
+  AND LM.lead_manager_code = SM.lead_manager_code
+  AND SM.senior_manager_code = M.senior_manager_code
+  AND M.manager_code = E.manager_code
+GROUP BY C.company_code,
+         C.founder
+ORDER BY C.company_code ASC;
+
 
 /* https://www.hackerrank.com/challenges/the-pads/problem */
 SELECT CONCAT(name, '(', LEFT(occupation, 1), ')')
@@ -52,6 +73,7 @@ SELECT CONCAT('There are a total of ', COUNT(occupation), ' ', LOWER(occupation)
 FROM occupations
 GROUP BY occupation
 ORDER BY total_jobs;
+
 
 /* https://www.hackerrank.com/challenges/what-type-of-triangle/problem */
 SELECT CASE
