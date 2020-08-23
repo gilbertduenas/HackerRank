@@ -1,23 +1,30 @@
 /* https://www.hackerrank.com/challenges/african-cities/problem */
+/****************************************************************/
 SELECT city.name
 FROM city
 JOIN country ON city.countrycode = country.code
 WHERE country.continent = 'Africa';
 
+
 /* https://www.hackerrank.com/challenges/asian-population/problem */
+/******************************************************************/
 SELECT SUM(city.population)
 FROM city
 JOIN country ON city.countrycode = country.code
 WHERE country.continent = 'Asia';
 
+
 /* https://www.hackerrank.com/challenges/average-population-of-each-continent/problem */
+/**************************************************************************************/
 SELECT country.continent,
        FLOOR(AVG(city.population))
 FROM city
 JOIN country ON city.countrycode = country.code
 GROUP BY country.continent;
 
+
 /* https://www.hackerrank.com/challenges/challenges/problem */
+/************************************************************/
 SELECT H.hacker_id,
        H.name,
        COUNT(C.challenge_id) C_id_count
@@ -46,7 +53,9 @@ OR C_id_count IN
 ORDER BY C_id_count DESC,
          H.hacker_id;
 
+
 /* https://www.hackerrank.com/challenges/contest-leaderboard/problem */
+/*********************************************************************/
 SELECT H.hacker_id,
        H.name,
        SUM(max_score) total_score
@@ -63,7 +72,9 @@ HAVING total_score > 0
 ORDER BY total_score DESC,
          H.hacker_id;
 
+
 /* https://www.hackerrank.com/challenges/full-score/problem */
+/************************************************************/
 SELECT H.hacker_id,
        H.name
 FROM hackers H
@@ -76,7 +87,9 @@ GROUP BY H.hacker_id,
 HAVING COUNT(S.hacker_id) > 1
 ORDER BY COUNT(S.hacker_id) DESC, S.hacker_id;
 
+
 /* https://www.hackerrank.com/challenges/harry-potter-and-wands/problem */
+/************************************************************************/
 SELECT W.id,
        P.age,
        W.coins_needed,
@@ -93,7 +106,9 @@ WHERE is_evil = 0
 ORDER BY W.power DESC,
          P.age DESC;
 
+
 /* https://www.hackerrank.com/challenges/the-report/problem */
+/************************************************************/
 SELECT CASE
            WHEN grades.grade > 7 THEN students.name
            ELSE 'NULL'
