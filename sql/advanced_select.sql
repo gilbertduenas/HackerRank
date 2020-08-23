@@ -1,4 +1,5 @@
 /* https://www.hackerrank.com/challenges/binary-search-tree-1/problem */
+/**********************************************************************/
 SELECT CASE
            WHEN p IS NULL THEN CONCAT(n, ' Root')
            WHEN n IN
@@ -19,6 +20,7 @@ ORDER BY n;
 
 
 /* https://www.hackerrank.com/challenges/occupations */
+/*****************************************************/
 SELECT MAX(CASE
                WHEN occupation = 'Doctor' THEN name
                ELSE NULL
@@ -44,6 +46,7 @@ GROUP BY ranked;
 
 
 /* https://www.hackerrank.com/challenges/the-company/problem */
+/*************************************************************/
 SELECT C.company_code,
        C.founder,
        COUNT(DISTINCT LM.lead_manager_code),
@@ -65,6 +68,7 @@ ORDER BY C.company_code ASC;
 
 
 /* https://www.hackerrank.com/challenges/the-pads/problem */
+/**********************************************************/
 SELECT CONCAT(name, '(', LEFT(occupation, 1), ')')
 FROM occupations
 ORDER BY name;
@@ -76,6 +80,7 @@ ORDER BY total_jobs;
 
 
 /* https://www.hackerrank.com/challenges/what-type-of-triangle/problem */
+/***********************************************************************/
 SELECT CASE
            WHEN A+B > C
                 AND A+C > B
