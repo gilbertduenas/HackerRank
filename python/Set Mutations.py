@@ -7,14 +7,16 @@ t = int(input())
 for i in range(t):
     command = list(input().split())
     s2 = set(map(int, input().split()))
+
+    getattr(s, command[0])(s2)
     
-    if command[0] == 'update':
-        s.update(s2)
-    elif command[0] == 'intersection_update':
-        s.intersection_update(s2)
-    elif command[0] == 'difference_update':
-        s.difference_update(s2)
-    elif command[0] == 'symmetric_difference_update':
-        s.symmetric_difference_update(s2)
+    # if command[0] == 'update':
+    #     s.update(s2)
+    # elif command[0] == 'intersection_update':
+    #     s.intersection_update(s2)
+    # elif command[0] == 'difference_update':
+    #     s.difference_update(s2)
+    # elif command[0] == 'symmetric_difference_update':
+    #     s.symmetric_difference_update(s2)
 
 print(sum(s))
