@@ -1,9 +1,60 @@
+/* I definitely did not do these alone. */
+
 /* https://www.hackerrank.com/challenges/15-days-of-learning-sql/problem */
 /*************************************************************************/
+SELECT submission_date,
+  (SELECT COUNT(DISTINCT hacker_id)
+   FROM submissions s1
+   WHERE s1.submission_date = s2.submission_date
+     AND
+       (SELECT COUNT(DISTINCT s3.submission_date)
+        FROM submissions s3
+        WHERE s3.hacker_id = s1.hacker_id
+          AND s3.submission_date < s2.submission_date) = dateDIFF(s2.submission_date, '2016-03-01')),
+  (SELECT hacker_id
+   FROM submissions s1
+   WHERE s1.submission_date = s2.submission_date
+   GROUP BY hacker_id
+   ORDER BY count(submission_id) DESC, hacker_id
+   LIMIT 1) H_ID,
+  (SELECT name
+   FROM hackers
+   WHERE hacker_id = H_ID)
+FROM
+  (SELECT DISTINCT submission_date
+   FROM submissions) s2
+GROUP BY submission_date;
 
 
 /* https://www.hackerrank.com/challenges/interviews/problem */
 /************************************************************/
+SELECT C.contest_id,
+       C.hacker_id,
+       C.name,
+       SUM(ts_sum),
+       SUM(tas_sum),
+       SUM(tv_sum),
+       SUM(tuv_sum)
+FROM contests C
+JOIN colleges U ON C.contest_id = U.contest_id
+JOIN challenges H ON U.college_id = H.college_id
+LEFT JOIN
+  (SELECT VS.challenge_id,
+          SUM(VS.total_views) tv_sum,
+          SUM(VS.total_unique_views) tuv_sum
+   FROM view_stats VS
+   GROUP BY VS.challenge_id) V ON H.challenge_id = V.challenge_id
+LEFT JOIN
+  (SELECT SS.challenge_id,
+          SUM(SS.total_submissions) ts_sum,
+          SUM(SS.total_accepted_submissions) tas_sum
+   FROM submission_stats SS
+   GROUP BY SS.challenge_id) S ON H.challenge_id = S.challenge_id
+GROUP BY C.contest_id,
+         C.hacker_id,
+         C.name
+HAVING SUM(ts_sum) + SUM(tas_sum) + SUM(tv_sum) + SUM(tuv_sum) > 0
+ORDER BY C.contest_id;
 
 
 /* https://www.hackerrank.com/challenges/placements/problem */
