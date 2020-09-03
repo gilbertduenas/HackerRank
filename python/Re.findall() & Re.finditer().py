@@ -7,3 +7,4 @@ alpha = '[qwrtypsdfghjklzxcvbnm]'
 a = re.findall('(?<=' + alpha +')([aeiou]{2,})' + alpha, input(), re.I)
 
 print('\n'.join(a or ['-1']))
+
