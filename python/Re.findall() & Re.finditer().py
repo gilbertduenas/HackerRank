@@ -1,6 +1,4 @@
-# https://www.hackerrank.com/challenges/re-group-groups/problem
-
-# regex still \me.
+# https://www.hackerrank.com/challenges/re-findall-re-finditer/problem
 
 import re
 
