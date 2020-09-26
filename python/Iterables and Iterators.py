@@ -10,3 +10,5 @@ c = list(combinations(N, K))
 f = filter(lambda i: 'a' in i, c)
 
 print(len(list(f))/len(c))
+ 
+ 
