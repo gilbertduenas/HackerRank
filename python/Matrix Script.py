@@ -8,14 +8,15 @@ import random
 import re
 import sys
 
-first_multiple_input = input().rstrip().split()
+n = int((input().split())[0])
+m = []
+matrix = ''
 
-n = int(first_multiple_input[0])
+for i in range(n):
+    temp = input()
+    m.append(temp)
 
-m = int(first_multiple_input[1])
+for j in zip(*m):
+    matrix += ''.join(j)
 
-matrix = []
-
-for _ in range(n):
-    matrix_item = input()
-    matrix.append(matrix_item)
+print(re.sub(r'(?<=\w)([^\w]+)(?=\w)', ' ', matrix))
