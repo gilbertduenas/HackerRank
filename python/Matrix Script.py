@@ -20,3 +20,4 @@ for j in zip(*m):
     matrix += ''.join(j)
 
 print(re.sub(r'(?<=\w)([^\w]+)(?=\w)', ' ', matrix))
+
