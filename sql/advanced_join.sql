@@ -24,7 +24,7 @@ FROM
   (SELECT DISTINCT submission_date
    FROM submissions) s2
 GROUP BY submission_date;
-
+ 
 
 /* https://www.hackerrank.com/challenges/interviews/problem */
 /************************************************************/
