@@ -9,8 +9,18 @@ import re
 import sys
 
 def pickingNumbers(a):
-    # Write your code here
-
+    max = 0
+    
+    for i in l:
+        c = l.count(i)
+        d = l.count(i-1)
+        c = c + d
+        
+        if c > max:
+            max = c
+    
+    return max
+    
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
