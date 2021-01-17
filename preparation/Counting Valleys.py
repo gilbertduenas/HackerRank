@@ -18,9 +18,10 @@ def countingValleys(steps, path):
         elif i == 'D':
             level -= 1
 
+# this determines a valley
         if level == 0 and i == 'U':
             valley += 1
-
+            
     return valley
 
 if __name__ == '__main__':
