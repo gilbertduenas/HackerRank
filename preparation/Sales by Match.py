@@ -10,6 +10,12 @@ import sys
 
 # Complete the sockMerchant function below.
 def sockMerchant(n, ar):
+    pairs = 0
+
+    for i in set(ar):
+        pairs += ar.count(i) // 2
+
+    return pairs
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
