@@ -101,3 +101,5 @@ GROUP BY f1.x,
 HAVING COUNT(f1.x) > 1
 OR f1.x < f1.y
 ORDER BY f1.x;
+
+                                  
