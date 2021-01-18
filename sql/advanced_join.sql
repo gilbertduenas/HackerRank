@@ -1,4 +1,4 @@
-/* I definitely did not do these alone. */
+/* It's dangerous out there. Don't SQL alone. */
 
 /* https://www.hackerrank.com/challenges/15-days-of-learning-sql/problem */
 /*************************************************************************/
@@ -101,5 +101,3 @@ GROUP BY f1.x,
 HAVING COUNT(f1.x) > 1
 OR f1.x < f1.y
 ORDER BY f1.x;
-
-                                  
