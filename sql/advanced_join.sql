@@ -1,7 +1,4 @@
-/* It's dangerous out there. Don't SQL alone. */
-
 /* https://www.hackerrank.com/challenges/15-days-of-learning-sql/problem */
-/*************************************************************************/
 SELECT submission_date,
   (SELECT COUNT(DISTINCT hacker_id)
    FROM submissions s1
@@ -27,7 +24,6 @@ GROUP BY submission_date;
  
 
 /* https://www.hackerrank.com/challenges/interviews/problem */
-/************************************************************/
 SELECT C.contest_id,
        C.hacker_id,
        C.name,
@@ -58,7 +54,6 @@ ORDER BY C.contest_id;
 
 
 /* https://www.hackerrank.com/challenges/placements/problem */
-/************************************************************/
 SELECT S.name
 FROM (students S
       JOIN friends F USING(id)
@@ -69,7 +64,6 @@ ORDER BY FP.salary;
 
 
 /* https://www.hackerrank.com/challenges/sql-projects/problem */
-/**************************************************************/
 SELECT start_date,
        MIN(end_date)
 FROM

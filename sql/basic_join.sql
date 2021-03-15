@@ -1,5 +1,4 @@
 /* https://www.hackerrank.com/challenges/african-cities/problem */
-/****************************************************************/
 SELECT city.name
 FROM city
 JOIN country ON city.countrycode = country.code
@@ -7,7 +6,6 @@ WHERE country.continent = 'Africa';
 
 
 /* https://www.hackerrank.com/challenges/asian-population/problem */
-/******************************************************************/
 SELECT SUM(city.population)
 FROM city
 JOIN country ON city.countrycode = country.code
@@ -15,7 +13,6 @@ WHERE country.continent = 'Asia';
 
 
 /* https://www.hackerrank.com/challenges/average-population-of-each-continent/problem */
-/**************************************************************************************/
 SELECT country.continent,
        FLOOR(AVG(city.population))
 FROM city
@@ -24,7 +21,6 @@ GROUP BY country.continent;
 
 
 /* https://www.hackerrank.com/challenges/challenges/problem */
-/************************************************************/
 SELECT H.hacker_id,
        H.name,
        COUNT(C.challenge_id) C_id_count
@@ -55,7 +51,6 @@ ORDER BY C_id_count DESC,
 
 
 /* https://www.hackerrank.com/challenges/contest-leaderboard/problem */
-/*********************************************************************/
 SELECT H.hacker_id,
        H.name,
        SUM(max_score) total_score
@@ -74,7 +69,6 @@ ORDER BY total_score DESC,
 
 
 /* https://www.hackerrank.com/challenges/full-score/problem */
-/************************************************************/
 SELECT H.hacker_id,
        H.name
 FROM hackers H
@@ -89,7 +83,6 @@ ORDER BY COUNT(S.hacker_id) DESC, S.hacker_id;
 
 
 /* https://www.hackerrank.com/challenges/harry-potter-and-wands/problem */
-/************************************************************************/
 SELECT W.id,
        P.age,
        W.coins_needed,
@@ -108,7 +101,6 @@ ORDER BY W.power DESC,
 
 
 /* https://www.hackerrank.com/challenges/the-report/problem */
-/************************************************************/
 SELECT CASE
            WHEN grades.grade > 7 THEN students.name
            ELSE 'NULL'
