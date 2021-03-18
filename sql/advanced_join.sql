@@ -84,7 +84,6 @@ ORDER BY DATEDIFF(start_date, MIN(end_date)) DESC, start_date;
 
 
 /* https://www.hackerrank.com/challenges/symmetric-pairs/problem */
-/*****************************************************************/
 SELECT f1.x,
        f1.y
 FROM functions f1
