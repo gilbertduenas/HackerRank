@@ -92,3 +92,4 @@ SELECT CASE
 FROM triangles;
 
 /**/
+                  /**/
