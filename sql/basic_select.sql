@@ -148,3 +148,4 @@ WHERE city REGEXP '^[^AEIOU].*[^AEIOU]$';
 /**/
 /**/                       
 /**/
+                       /**/
