@@ -8,7 +8,7 @@ import random
 import re
 import sys
 
-# Complete the repeatedString function below.
+# Complete the repeatedString function below
 def repeatedString(s, n):
     a = s.count('a') 
     x = n // len(s)
