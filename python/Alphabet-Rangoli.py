@@ -1,6 +1,6 @@
 # https://www.hackerrank.com/challenges/alphabet-rangoli/problem
 
-# it is no wonder that future AI will be able to program better than humans in the future if all we do is google answers
+# it is no wonder that future AI will be able to program better than humans in the future if all we do is google answers....
 
 import string
 
